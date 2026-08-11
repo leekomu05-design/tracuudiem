@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tra c?u tuy?n sinh - USSH ÐHQG-HCM</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #202733;
+}
+
+.header {
+    background: white;
+    border-top: 5px solid #921c2f;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.header-inner {
+    max-width: 1050px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #921c2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #921c2f;
+    font-weight: bold;
+}
+
+.school-name {
+    font-weight: 800;
+    color: #86172a;
+}
+
+.school-name span {
+    display: block;
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.nav {
+    background: #8d192d;
+    color: white;
+}
+
+.nav-inner {
+    max-width: 1050px;
+    margin: auto;
+    padding: 13px 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero {
+    background: linear-gradient(120deg, #8d192d, #b42c42);
+    color: white;
+    padding: 38px 20px;
+}
+
+.hero-inner {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.hero p {
+    margin: 0;
+    opacity: .9;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d6dae1;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.search-button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #941b2e;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #781322;
+}
+
+.result {
+    display: none;
+}
+
+.status {
+    padding: 15px;
+    background: #f1faf4;
+    border-left: 5px solid #21864b;
+    border-radius: 6px;
+    color: #176c3c;
+}
+
+.status strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.info-item {
+    background: #f7f8fa;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.info-item small {
+    display: block;
+    color: #717987;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f6f7f9;
+}
+
+.footer {
+    text-align: center;
+    color: #7b8491;
+    font-size: 12px;
+    padding: 25px;
+}
+
+.demo-note {
+    margin-top: 6px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+@media (max-width: 650px) {
+    .form-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .school-name {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 23px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <div class="logo">USSH</div>
+
+        <div class="school-name">
+            TRU?NG Ð?I H?C KHOA H?C XÃ H?I VÀ NHÂN VAN
+            <span>
+                Ð?I H?C QU?C GIA THÀNH PH? H? CHÍ MINH
+            </span>
+        </div>
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="nav-inner">
+        TRANG CH? &nbsp; | &nbsp;
+        TRA C?U TUY?N SINH &nbsp; | &nbsp;
+        THÔNG TIN TUY?N SINH
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1>Tra c?u k?t qu? tuy?n sinh</h1>
+        <p>
+            Tra c?u thông tin k?t qu? xét tuy?n theo mã h? so.
+        </p>
+    </div>
+</section>
+
+<main class="container">
+
+    <section class="card">
+
+        <h2>Thông tin tra c?u</h2>
+
+        <div class="form-grid">
+
+            <div>
+                <label>S? báo danh / Mã h? so</label>
+                <input
+                    type="text"
+                    id="code"
+                    placeholder="Nh?p s? báo danh ho?c mã h? so"
+                >
+            </div>
+
+            <div>
+                <label>Nam tuy?n sinh</label>
+
+                <select id="year">
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Phuong th?c xét tuy?n</label>
+
+                <select id="method">
+                    <option>Xét di?m thi THPT</option>
+                    <option>Xét h?c b?</option>
+                    <option>Ðánh giá nang l?c</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Ð?i tu?ng</label>
+
+                <select>
+                    <option>Thí sinh THPT</option>
+                    <option>Thí sinh t? do</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button
+            class="search-button"
+            onclick="traCuu()"
+        >
+            TRA C?U K?T QU?
+        </button>
+
+    </section>
+
+
+    <section
+        class="card result"
+        id="result"
+    >
+
+        <div class="status">
+
+            <strong>? K?T QU?: Ð?T</strong>
+
+            Thông tin k?t qu? du?c hi?n th? du?i d?ng mô ph?ng.
+
+        </div>
+
+
+        <h2 style="margin-top:25px;">
+            Thông tin thí sinh
+        </h2>
+
+
+        <div class="info-grid">
+
+            <div class="info-item">
+                <small>H? và tên</small>
+                <b>HU?NH TH? TRÚC LINH</b>
+            </div>
+
+            <div class="info-item">
+                <small>Ngày sinh</small>
+                <b>18/10/2005</b>
+            </div>
+
+            <div class="info-item">
+                <small>S? báo danh / Mã h? so</small>
+                <b id="outCode">---</b>
+            </div>
+
+            <div class="info-item">
+                <small>Nam tuy?n sinh</small>
+                <b id="outYear">2026</b>
+            </div>
+
+            <div class="info-item">
+                <small>Ngành</small>
+                <b>Ngôn ng? Trung Qu?c</b>
+            </div>
+
+            <div class="info-item">
+                <small>Phuong th?c</small>
+                <b id="outMethod">
+                    Xét di?m thi THPT
+                </b>
+            </div>
+
+        </div>
+
+
+        <h2 style="margin-top:25px;">
+            K?t qu? di?m
+        </h2>
+
+
+        <table>
+
+            <tr>
+                <th>Môn</th>
+                <th>Ði?m</th>
+            </tr>
+
+            <tr>
+                <td>Toán</td>
+                <td>8.20</td>
+            </tr>
+
+            <tr>
+                <td>Ng? van</td>
+                <td>8.00</td>
+            </tr>
+
+            <tr>
+                <td>Ti?ng Anh</td>
+                <td>8.40</td>
+            </tr>
+
+            <tr>
+                <th>T?ng di?m</th>
+                <th>24.60</th>
+            </tr>
+
+        </table>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    © 2026 Tru?ng Ð?i h?c Khoa h?c Xã h?i và Nhân van – ÐHQG-HCM
+
+    <div class="demo-note">
+        Giao di?n mô ph?ng — d? li?u minh h?a,
+        không ph?i c?ng tra c?u chính th?c.
+    </div>
+
+</footer>
+
+
+<script>
+
+function traCuu() {
+
+    const code =
+        document.getElementById("code").value.trim();
+
+    if (!code) {
+
+        alert(
+            "Vui lòng nh?p s? báo danh ho?c mã h? so."
+        );
+
+        document
+            .getElementById("code")
+            .focus();
+
+        return;
+    }
+
+
+    document
+        .getElementById("outCode")
+        .textContent = code;
+
+
+    document
+        .getElementById("outYear")
+        .textContent =
+        document.getElementById("year").value;
+
+
+    document
+        .getElementById("outMethod")
+        .textContent =
+        document.getElementById("method").value;
+
+
+    const result =
+        document.getElementById("result");
+
+
+    result.style.display = "block";
+
+
+    result.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
